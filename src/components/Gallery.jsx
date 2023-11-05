@@ -5,6 +5,7 @@ import Product from "./product";
 
 const Gallery = () => {
   const [products, setProducts] = useState([]);
+  const[isChecked, setIsChecked] = useState({newId: 0, status:false});
 
   useEffect(() => {
     fetch("product.json")
@@ -27,7 +28,7 @@ const Gallery = () => {
         </div>
 
         {products.map((product) => (
-          <Product key={product.id} product={product}></Product>
+          <Product key={product.id} product={product} isChecked={isChecked} setIsChecked={setIsChecked}></Product>
         ))}
         <div></div>
       </div>
