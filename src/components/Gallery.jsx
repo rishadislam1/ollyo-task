@@ -20,7 +20,7 @@ const Gallery = () => {
     return (
         <div className="mt-10 p-5">
             <div className="grid grid-cols-5 justify-center items-center gap-10">
-                <img src={telephoneImage} alt="" className='rounded-xl border border-gray-400 col-span-2 row-span-2' />
+                <img src={telephoneImage} alt="" className='rounded-xl border border-gray-400 col-span-2 row-span-2 cursor-pointer' />
                 {
                     products.map(product=><Product key={product.id} product={product}></Product>)
                 }
